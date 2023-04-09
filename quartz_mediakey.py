@@ -33,6 +33,6 @@ def HIDPostAuxKey(key):
     doKey(False)
 
 
-for _ in range(10):
-    HIDPostAuxKey(NX_KEYTYPE_SOUND_UP)
-HIDPostAuxKey(NX_KEYTYPE_PLAY)
+# for _ in range(10):
+#     HIDPostAuxKey(NX_KEYTYPE_SOUND_UP)
+# HIDPostAuxKey(NX_KEYTYPE_PLAY)
