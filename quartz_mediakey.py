@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import Quartz
+import sys
 
 # NSEvent.h
 NSSystemDefined = 14
@@ -12,6 +13,22 @@ NX_KEYTYPE_NEXT = 17
 NX_KEYTYPE_PREVIOUS = 18
 NX_KEYTYPE_FAST = 19
 NX_KEYTYPE_REWIND = 20
+
+help_msg="""USAGE:
+python3 quartz_mediakey.py <parameter>
+
+PARAMETERS:
+-h help
+
+-p play/pause
+-n next
+-r prev
+-f fast
+-w rewind
+
+-u sound up
+-d sound down
+"""
 
 
 def HIDPostAuxKey(key):
@@ -32,7 +49,22 @@ def HIDPostAuxKey(key):
     doKey(True)
     doKey(False)
 
+if __name__ == '__main__':
+    if len(sys.argv)<2 or sys.argv[1]=="-h":
+        print(help_msg)
+        exit(0)
+    if sys.argv[1]=="-p":
+        HIDPostAuxKey(NX_KEYTYPE_PLAY)
+    if sys.argv[1]=="-n":
+        HIDPostAuxKey(NX_KEYTYPE_NEXT)    
+    if sys.argv[1]=="-r":
+        HIDPostAuxKey(NX_KEYTYPE_PREVIOUS)
+    if sys.argv[1]=="-f":
+        HIDPostAuxKey(NX_KEYTYPE_FAST)    
+    if sys.argv[1]=="-w":
+        HIDPostAuxKey(NX_KEYTYPE_REWIND)
 
-# for _ in range(10):
-#     HIDPostAuxKey(NX_KEYTYPE_SOUND_UP)
-# HIDPostAuxKey(NX_KEYTYPE_PLAY)
+    if sys.argv[1]=="-u":
+        HIDPostAuxKey(NX_KEYTYPE_SOUND_UP)
+    if sys.argv[1]=="-d":
+        HIDPostAuxKey(NX_KEYTYPE_SOUND_DOWN)
