@@ -1,14 +1,17 @@
 
 # Control MacOS Media Keys with Shortcuts
 
-## INSTALL
+## Install
 ```
 pip3 install pyobjc-framework-Quartz
-git clone https://github.com/guinmoon/ios_macos_mediakey_shortcuts
+git clone https://github.com/guinmoon/ios_macos_mediakey_shortcuts ~/ios_macos_mediakey_shortcuts
 ```
 
+### Add Shortcuts
+Play/Pause shortcut:<br>
+![https://www.icloud.com/shortcuts/af41822e22a544edab5f2d9dc9d65294](dist/play.png)
 
-## USAGE:
+## Usage:
 ```
 python3 quartz_mediakey.py <parameter>
 
