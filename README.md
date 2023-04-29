@@ -4,7 +4,7 @@
 ## Install
 ```
 pip3 install pyobjc-framework-Quartz
-git clone https://github.com/guinmoon/ios_macos_mediakey_shortcuts ~/ios_macos_mediakey_shortcuts
+git clone https://github.com/guinmoon/ios-macos-mediakey-shortcuts ~/ios_macos_mediakey_shortcuts
 ```
 
 ### Add Shortcuts
