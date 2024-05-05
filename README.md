@@ -17,8 +17,6 @@ git clone https://github.com/guinmoon/ios-macos-mediakey-shortcuts ~/ios_macos_m
 System Preferences -> Sharing -> Remote Login
 ![ssh](dist/allossh.png)
 
-### Configure shortcut
-![ssh](dist/setup.png)
 
 ## Python Script Usage:
 ```
